@@ -7,7 +7,6 @@ import {
   hours,
   hoursNote,
   workshops,
-  museStudio,
 } from "@/lib/data/studio"
 import Reveal from "@/lib/components/reveal"
 import CtaBanner from "@/lib/components/cta-banner"
@@ -17,7 +16,7 @@ export default function HomePage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative isolate overflow-hidden">
+      <section className="relative isolate min-h-[100svh] overflow-hidden">
         <div className="absolute inset-0 -z-10">
           <Image
             src="/images/studio-hero.jpg"
@@ -29,7 +28,7 @@ export default function HomePage() {
           />
           <div className="absolute inset-0 bg-gradient-to-r from-ink/85 via-ink/60 to-ink/25" />
         </div>
-        <div className="container-page flex min-h-[88vh] flex-col justify-center py-28 text-cream">
+        <div className="container-page flex min-h-[100svh] flex-col justify-center py-28 text-cream">
           <p
             className="eyebrow !text-clay-light animate-fade-up"
           >
@@ -39,7 +38,10 @@ export default function HomePage() {
             className="mt-5 max-w-3xl font-display text-5xl leading-[1.02] animate-fade-up sm:text-6xl md:text-7xl"
             style={{ animationDelay: "80ms" }}
           >
-            Where everyone is an artist.
+            <span className="md:hidden">Where everyone is an artist.</span>
+            <span className="hero-typewriter hidden md:inline-block">
+              Where everyone is an artist.
+            </span>
           </h1>
           <p
             className="mt-6 max-w-xl text-lg leading-relaxed text-cream/80 animate-fade-up"
@@ -250,34 +252,6 @@ export default function HomePage() {
             ))}
           </div>
         </div>
-      </section>
-
-      {/* Muse teaser */}
-      <section className="container-page py-24">
-        <Reveal className="grid items-center gap-10 overflow-hidden rounded-xl2 border border-ink/10 bg-sand lg:grid-cols-2">
-          <div className="relative h-64 lg:h-full lg:min-h-[340px]">
-            <Image
-              src="/images/mosaic-tiles.jpg"
-              alt="Colorful mosaic tiles at Muse West Brighton"
-              fill
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover"
-            />
-          </div>
-          <div className="p-8 sm:p-12">
-            <p className="eyebrow">Our sister studio</p>
-            <h2 className="mt-4 font-display text-3xl leading-tight text-ink sm:text-4xl">
-              {museStudio.name}
-            </h2>
-            <p className="mt-4 leading-relaxed text-ink/70">
-              {museStudio.description}
-            </p>
-            <Link href="/muse" className="btn-primary mt-7">
-              Discover Muse
-              <ArrowIcon className="h-4 w-4" />
-            </Link>
-          </div>
-        </Reveal>
       </section>
 
       <CtaBanner />

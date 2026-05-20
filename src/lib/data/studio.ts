@@ -179,14 +179,6 @@ export const faqs: Faq[] = [
   },
 ]
 
-export const museStudio = {
-  name: "Muse West Brighton",
-  url: "http://www.musewestbrighton.com/",
-  street: "Forest Avenue",
-  description:
-    "Our sister studio on Forest Avenue. Muse is an all-inclusive, no-reservation-required craft studio offering a wide assortment of crafts — from stained glass to wind chimes to glass-blown ornaments.",
-}
-
 export type NavLink = { label: string; href: string }
 
 export const navLinks: NavLink[] = [
@@ -194,6 +186,5 @@ export const navLinks: NavLink[] = [
   { label: "Visit", href: "/visit" },
   { label: "Workshops", href: "/workshops" },
   { label: "Parties & Events", href: "/parties" },
-  { label: "Muse Studio", href: "/muse" },
   { label: "Contact", href: "/contact" },
 ]
